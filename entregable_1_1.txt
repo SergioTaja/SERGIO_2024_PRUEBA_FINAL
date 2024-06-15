@@ -1,0 +1,27 @@
+@startuml
+
+Soldado "1..1"  -- "1..1" Cuerpos :pertenece
+Soldado "1..1"  -- "1..1" Compania :pertenece
+Compania "1..1" -- "1..1" Cuartel
+Soldado "1..1" -- "1..1" Servicio
+
+
+Soldado : int id
+Soldado : String nombre
+Soldado : String apellidos
+Soldado : String graduacion
+
+Cuartel : int id 
+Cuartel : String nombre
+Cuartel : String ubicacion
+
+Cuerpos : int id
+Cuerpos : String denominacion
+
+Compania : int numcompania
+Compania : String getdenominacion()
+
+Servicio : int codigo
+Servicio : String tipo
+
+@enduml
